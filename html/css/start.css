@@ -1,0 +1,133 @@
+/* Mengatur gaya umum untuk halaman */
+body {
+  font-family: 'Poppins', sans-serif; /* Font modern dan elegan */
+  background: linear-gradient(135deg, #6a11cb, #2575fc); /* Latar belakang gradien */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  color: #fff; /* Warna teks putih untuk kontras */
+}
+
+/* Gaya untuk kontainer todo list */
+.todo-container {
+  background: rgba(255, 255, 255, 0.2); /* Efek kaca (glassmorphism) */
+  backdrop-filter: blur(10px); /* Blur background di belakang kontainer */
+  padding: 20px 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); /* Shadow halus */
+  text-align: center;
+  width: 320px;
+}
+
+/* Gaya untuk judul */
+h1 {
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: #fff;
+  text-transform: uppercase; /* Semua huruf kapital */
+  letter-spacing: 2px; /* Jarak antar huruf */
+}
+
+/* Gaya untuk input */
+input {
+  width: 80%;
+  padding: 12px;
+  border: none;
+  border-radius: 25px;
+  outline: none;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  background-color: rgba(255, 255, 255, 0.8); /* Warna transparan pada input */
+}
+
+/* Efek glow pada input saat focus */
+input:focus {
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+/* Gaya untuk kontainer tombol */
+.button-container {
+  display: flex; /* Menggunakan flexbox */
+  justify-content: center; /* Membuat tombol sejajar di tengah */
+  gap: 10px; /* Jarak antara tombol */
+  margin-top: 20px;
+}
+
+button {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 25px;
+  background-color: #ff6b6b;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s;
+  display: flex;
+  align-items: center; /* Memastikan teks di dalam tombol sejajar secara vertikal */
+  justify-content: center;
+}
+
+button:hover {
+  background-color: #ff4757;
+  transform: scale(1.05);
+}
+
+/* Menghapus bullet points pada list */
+ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+}
+
+/* Gaya untuk item list */
+li {
+  background-color: rgba(255, 255, 255, 0.8); /* Sedikit transparan */
+  padding: 12px;
+  margin-top: 10px;
+  border-radius: 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background 0.3s, transform 0.3s;
+}
+
+/* Efek hover pada item list */
+li:hover {
+  background-color: #a29bfe; /* Warna item berubah saat di-hover */
+  transform: translateX(5px); /* Gerakan item saat di-hover */
+}
+
+/* Gaya untuk item list yang sudah selesai */
+li.completed {
+  text-decoration: line-through;
+  opacity: 0.5;
+}
+
+/* Gaya untuk area QR code */
+#qrcode {
+  margin-top: 20px;
+  padding: 15px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 12px;
+  display: inline-block;
+}
+
+/* QR Code lebih halus dengan border */
+#qrcode img {
+  max-width: 100%;
+  border-radius: 10px;
+}
+
+/* Responsivitas untuk layar kecil */
+@media screen and (max-width: 480px) {
+  .todo-container {
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+
+  input {
+    width: 100%;
+  }
+}

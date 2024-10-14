@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Todo List Challenge + QR Share</title>
+  <link rel="stylesheet" href="css/start.css">
+</head>
+<body>
+  <div class="todo-container">
+    <h1>Todo List</h1>
+    <input type="text" id="new-todo" placeholder="Masukkan tugas baru...">
+    <ul id="todo-list"></ul>
+    <div class="button-container">
+      <button onclick="addTodo()">Tambah Tugas</button>
+      <button class="sendiri" onclick="generateQRCode()">Bagikan ke Teman</button>
+    </div>
+    
+    <div id="qrcode"></div>
+  </div>
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+
+  <script src="js/start.js"></script> <!-- Tambahkan library qrcode.js -->
+  <script src="js/script.js"></script>
+</body>
+</html>
